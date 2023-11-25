@@ -8,6 +8,7 @@ const port = 5000 || process.env.PORT;
 
 const authenticationRoutes = require("./routes/authentication/index");
 const usersRoutes = require("./routes/users/index");
+const globalErrorHandler = require("./middleWares/globalErrorHandler");
 
 applyMiddleware(app);
 
@@ -24,11 +25,7 @@ app.all("*", (req, res, next) => {
   next(err);
 });
 
-app.use((err, req, res, next) => {
-  res.status(err.status || 500).json({
-    message: err.message,
-  });
-});
+app.use(globalErrorHandler);
 
 const main = async () => {
   await connectDatabase();
