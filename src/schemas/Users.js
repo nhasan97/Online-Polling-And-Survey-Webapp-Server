@@ -9,6 +9,7 @@ const UserSchema = new Schema({
   role: {
     type: String,
     required: true,
+    enum: ["user", "surveyor", "admin", "pro-user"],
   },
   status: {
     type: String,
