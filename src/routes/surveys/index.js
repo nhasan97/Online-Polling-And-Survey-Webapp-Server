@@ -9,7 +9,9 @@ const {
   getResponsesFromDB,
   getSingleSurveyResponsesFromDB,
   savePreferenceInDB,
+  getSingleSurveyPreference,
 } = require("../../api/survey");
+
 const verifyToken = require("../../middleWares/verifyToken");
 
 const router = express.Router();
@@ -31,5 +33,7 @@ router.get("/survey-responses", getResponsesFromDB);
 router.get("/survey-responses/:_id", getSingleSurveyResponsesFromDB);
 
 router.post("/survey-preferences", savePreferenceInDB);
+
+router.get("/survey-preferences/:_id", getSingleSurveyPreference);
 
 module.exports = router;
