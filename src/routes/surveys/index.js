@@ -4,6 +4,10 @@ const {
   getSurveyDataFromDB,
   getUserBasedSurveyFromDB,
   updateSurveyData,
+  getParticularSurveyData,
+  saveResponseInDB,
+  getResponsesFromDB,
+  getSingleSurveyResponsesFromDB,
 } = require("../../api/survey");
 const verifyToken = require("../../middleWares/verifyToken");
 
@@ -16,5 +20,13 @@ router.get("/surveys", getSurveyDataFromDB);
 router.get("/user-surveys", verifyToken, getUserBasedSurveyFromDB);
 
 router.patch("/surveys/:_id", updateSurveyData);
+
+router.get("/surveys/:_id", getParticularSurveyData);
+
+router.post("/survey-responses", saveResponseInDB);
+
+router.get("/survey-responses", getResponsesFromDB);
+
+router.get("/survey-responses/:_id", getSingleSurveyResponsesFromDB);
 
 module.exports = router;
