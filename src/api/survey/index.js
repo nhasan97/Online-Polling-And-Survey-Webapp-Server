@@ -6,6 +6,7 @@ const getParticularSurveyData = require("./controllers/getParticularSurveyData")
 const saveResponseInDB = require("./controllers/saveResponseInDB");
 const getResponsesFromDB = require("./controllers/getResponsesFromDB");
 const getSingleSurveyResponsesFromDB = require("./controllers/getSingleSurveyResponsesFromDB");
+const savePreferenceInDB = require("./controllers/savePreferenceInDB");
 
 module.exports = {
   saveSurveyDataInDB,
@@ -16,4 +17,5 @@ module.exports = {
   saveResponseInDB,
   getResponsesFromDB,
   getSingleSurveyResponsesFromDB,
+  savePreferenceInDB,
 };
