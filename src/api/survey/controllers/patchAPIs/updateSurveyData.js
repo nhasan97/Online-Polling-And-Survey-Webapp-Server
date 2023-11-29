@@ -3,7 +3,7 @@ const Surveys = require("../../../../schemas/Surveys");
 const updateSurveyData = async (req, res) => {
   try {
     const surveyId = req.params._id;
-    const filter = { _id: new ObjectId(surveyId) };
+    const filter = { _id: surveyId };
 
     const options = { upsert: true };
 
