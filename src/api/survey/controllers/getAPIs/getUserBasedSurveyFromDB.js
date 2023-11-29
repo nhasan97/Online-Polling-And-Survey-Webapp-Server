@@ -1,4 +1,4 @@
-const Surveys = require("../../../schemas/Surveys");
+const Surveys = require("../../../../schemas/Surveys");
 
 const getUserBasedSurveyFromDB = async (req, res) => {
   try {

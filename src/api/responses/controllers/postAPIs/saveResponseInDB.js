@@ -1,4 +1,4 @@
-const Responses = require("../../../schemas/Responses");
+const Responses = require("../../../../schemas/Responses");
 
 const saveResponseInDB = async (req, res) => {
   try {

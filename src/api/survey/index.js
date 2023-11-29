@@ -1,13 +1,8 @@
-const saveSurveyDataInDB = require("./controllers/saveSurveyDataInDB");
-const getSurveyDataFromDB = require("./controllers/getSurveyDataFromDB");
-const getUserBasedSurveyFromDB = require("./controllers/getUserBasedSurveyFromDB");
-const updateSurveyData = require("./controllers/updateSurveyData");
-const getParticularSurveyData = require("./controllers/getParticularSurveyData");
-const saveResponseInDB = require("./controllers/saveResponseInDB");
-const getResponsesFromDB = require("./controllers/getResponsesFromDB");
-const getSingleSurveyResponsesFromDB = require("./controllers/getSingleSurveyResponsesFromDB");
-const savePreferenceInDB = require("./controllers/savePreferenceInDB");
-const getSingleSurveyPreference = require("./controllers/getSingleSurveyPreference");
+const saveSurveyDataInDB = require("./controllers/postAPIs/saveSurveyDataInDB");
+const getSurveyDataFromDB = require("./controllers/getAPIs/getSurveyDataFromDB");
+const getUserBasedSurveyFromDB = require("./controllers/getAPIs/getUserBasedSurveyFromDB");
+const updateSurveyData = require("./controllers/patchAPIs/updateSurveyData");
+const getParticularSurveyData = require("./controllers/getAPIs/getParticularSurveyData");
 
 module.exports = {
   saveSurveyDataInDB,
@@ -15,9 +10,4 @@ module.exports = {
   getUserBasedSurveyFromDB,
   updateSurveyData,
   getParticularSurveyData,
-  saveResponseInDB,
-  getResponsesFromDB,
-  getSingleSurveyResponsesFromDB,
-  savePreferenceInDB,
-  getSingleSurveyPreference,
 };

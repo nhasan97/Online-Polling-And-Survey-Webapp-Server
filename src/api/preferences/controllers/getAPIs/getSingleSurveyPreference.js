@@ -1,4 +1,4 @@
-const Preferences = require("../../../schemas/Preference");
+const Preferences = require("../../../../schemas/Preference");
 
 const getSingleSurveyPreference = async (req, res) => {
   try {
