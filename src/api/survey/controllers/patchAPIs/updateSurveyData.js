@@ -13,8 +13,6 @@ const updateSurveyData = async (req, res) => {
         description: req.body.description,
         category: req.body.category,
         deadline: req.body.deadline,
-        status: req.body.status,
-        email: req.body.email,
       },
     };
 
