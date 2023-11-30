@@ -6,6 +6,7 @@ const {
   updateSurveyData,
   getParticularSurveyData,
   deleteSurveyFromDB,
+  updateSurveyStatus,
 } = require("../../api/survey");
 
 const verifyToken = require("../../middleWares/verifyToken");
@@ -23,5 +24,7 @@ router.patch("/surveys/:_id", updateSurveyData);
 router.get("/surveys/:_id", getParticularSurveyData);
 
 router.delete("/surveys/:_id", deleteSurveyFromDB);
+
+router.patch("/surveys/update-status/:_id", updateSurveyStatus);
 
 module.exports = router;

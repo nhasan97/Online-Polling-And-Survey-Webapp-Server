@@ -4,6 +4,7 @@ const getUserBasedSurveyFromDB = require("./controllers/getAPIs/getUserBasedSurv
 const updateSurveyData = require("./controllers/patchAPIs/updateSurveyData");
 const getParticularSurveyData = require("./controllers/getAPIs/getParticularSurveyData");
 const deleteSurveyFromDB = require("./controllers/deleteAPIs/deleteSurveyFromDB");
+const updateSurveyStatus = require("./controllers/patchAPIs/updateSurveyStatus");
 
 module.exports = {
   saveSurveyDataInDB,
@@ -12,4 +13,5 @@ module.exports = {
   updateSurveyData,
   getParticularSurveyData,
   deleteSurveyFromDB,
+  updateSurveyStatus,
 };

@@ -11,6 +11,8 @@ const usersRoutes = require("./src/routes/users/index");
 const surveyRoutes = require("./src/routes/surveys/index");
 const responseRoutes = require("./src/routes/responses/index");
 const preferenceRoutes = require("./src/routes/preferences/index");
+const paymentRoute = require("./src/routes/payment/index");
+
 const globalErrorHandler = require("./src/middleWares/globalErrorHandler");
 
 applyMiddleware(app);
@@ -20,6 +22,7 @@ app.use(usersRoutes);
 app.use(surveyRoutes);
 app.use(responseRoutes);
 app.use(preferenceRoutes);
+app.use(paymentRoute);
 
 app.get("/", (req, res) => {
   res.send("server started");
