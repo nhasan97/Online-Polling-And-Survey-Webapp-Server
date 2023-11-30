@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
 const UserSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+  },
   email: {
     type: String,
     required: true,
@@ -11,10 +15,7 @@ const UserSchema = new Schema({
     required: true,
     enum: ["user", "surveyor", "admin", "pro-user"],
   },
-  status: {
-    type: String,
-    required: true,
-  },
+
   timeStamp: {
     type: Number,
     required: true,
