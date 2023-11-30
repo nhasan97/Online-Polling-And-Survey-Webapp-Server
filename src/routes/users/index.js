@@ -4,13 +4,14 @@ const {
   getUserDataFromDB,
   updateUserRoleInDB,
 } = require("../../api/user");
+const verifyToken = require("../../middleWares/verifyToken");
 
 const router = express.Router();
 
-router.put("/users/:email", saveUserDataInDB);
+router.put("/users/:email", verifyToken, saveUserDataInDB);
 
-router.get("/users", getUserDataFromDB);
+router.get("/users", verifyToken, getUserDataFromDB);
 
-router.put("/users/update-role/:email", updateUserRoleInDB);
+router.put("/users/update-role/:email", verifyToken, updateUserRoleInDB);
 
 module.exports = router;

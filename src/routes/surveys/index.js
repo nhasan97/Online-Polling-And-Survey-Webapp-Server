@@ -19,12 +19,12 @@ router.get("/surveys", getSurveyDataFromDB);
 
 router.get("/user-surveys", verifyToken, getUserBasedSurveyFromDB);
 
-router.patch("/surveys/:_id", updateSurveyData);
+router.patch("/surveys/:_id", verifyToken, updateSurveyData);
 
 router.get("/surveys/:_id", getParticularSurveyData);
 
-router.delete("/surveys/:_id", deleteSurveyFromDB);
+router.delete("/surveys/:_id", verifyToken, deleteSurveyFromDB);
 
-router.patch("/surveys/update-status/:_id", updateSurveyStatus);
+router.patch("/surveys/update-status/:_id", verifyToken, updateSurveyStatus);
 
 module.exports = router;
