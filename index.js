@@ -12,6 +12,7 @@ const surveyRoutes = require("./src/routes/surveys/index");
 const responseRoutes = require("./src/routes/responses/index");
 const preferenceRoutes = require("./src/routes/preferences/index");
 const paymentRoute = require("./src/routes/payment/index");
+const commentRoute = require("./src/routes/comments/index");
 
 const globalErrorHandler = require("./src/middleWares/globalErrorHandler");
 
@@ -23,6 +24,7 @@ app.use(surveyRoutes);
 app.use(responseRoutes);
 app.use(preferenceRoutes);
 app.use(paymentRoute);
+app.use(commentRoute);
 
 app.get("/", (req, res) => {
   res.send("server started");
